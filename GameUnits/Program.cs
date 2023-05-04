@@ -4,8 +4,15 @@ namespace GameUnits
     {
         private static void Main()
         {
-            Unit newUnit = new SettlerUnit();
-            Console.WriteLine($"{newUnit.Health} , {newUnit.Move()}, {newUnit.Cost}");
+            Unit settlerUnit = new SettlerUnit();
+            Unit militaryUnit = new MilitaryUnit();
+
+            settlerUnit.Move();
+            militaryUnit.Move();
+
+            Console.WriteLine($"SettlerUnit Health = {settlerUnit.Health}, Cost = {settlerUnit.Cost} and Moves = {settlerUnit.Move()}");
+            Console.WriteLine($"MilitaryUnit Health = {militaryUnit.Health}, Cost = {militaryUnit.Cost} and Moves = {militaryUnit.Move()}");
+
         }
     }
 }
