@@ -2,13 +2,23 @@ namespace GameUnits
 {
     public abstract class Unit
     {
-        int movement = 0;
+        protected int movement;
+        public float Health {get; set;}
         public abstract float Cost {get;}
-        public virtual float Health {get; set;}
 
+        public Unit(int movement, int health)
+        {
+            this.movement = movement;
+            Health = health;
+        }
         public int Move()
         {
             return movement;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name} : HP = {Health} COST = {Cost:2}";
         }
     }
 }
