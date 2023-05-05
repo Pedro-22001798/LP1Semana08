@@ -18,7 +18,7 @@ namespace GameUnits
 
         public override string ToString()
         {
-            return $"{this.GetType().Name} : HP = {Health} COST = {Cost:2}";
+            return $"{this.GetType().Name}: HP = {Health} COST = {Cost}";
         }
     }
 }
